@@ -101,15 +101,42 @@ let c = console.log
 
 
 
-const usuario = document.createElement('p')
-// usuario.textContent = 'Bienvenidos Usuarios'
-usuario.innerHTML = `<em>usuarios</em>`
-usuario.classList.add('users')
-usuario.id = 'usuario'
+// const usuario = document.createElement('p')
+// // usuario.textContent = 'Bienvenidos Usuarios'
+// usuario.innerHTML = `<em>usuarios</em>`
+// usuario.classList.add('users')
+// usuario.id = 'usuario'
 
-// document.body.appendChild(usuario)
+// // document.body.appendChild(usuario)
 
-const containerBienvenida = document.getElementById('contenedor-bienvenida')
-if(containerBienvenida && containerBienvenida.querySelector('span')){
-    containerBienvenida.querySelector('span').appendChild(usuario)
-}
+// const containerBienvenida = document.getElementById('contenedor-bienvenida')
+// if(containerBienvenida && containerBienvenida.querySelector('span')){
+//     containerBienvenida.querySelector('span').appendChild(usuario)
+// }
+
+
+
+
+// document.querySelector('h1').onclick
+const title = document.getElementById('title')
+// title.addEventListener('click', () => {
+    //alert('hola mundo')
+// })
+// const holaMundo = () => alert('Hola mundillo')
+// title.addEventListener('click',holaMundo)
+// document.getElementById('saludar').addEventListener('click',holaMundo)
+
+// const holaMundo = text => alert(text)
+// title.addEventListener('click',()=>{
+//     holaMundo('El DOM')
+// })
+// document.getElementById('saludar').addEventListener('click',()=>{
+//     holaMundo('Bienvenidos amigos!')
+// })
+const holaMundo = e => alert(e.target.textContent) 
+title.addEventListener('click',e => {
+    holaMundo(e)
+})
+document.getElementById('saludar').addEventListener('click', e => {
+    holaMundo(e)
+})
