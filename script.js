@@ -133,10 +133,58 @@ const title = document.getElementById('title')
 // document.getElementById('saludar').addEventListener('click',()=>{
 //     holaMundo('Bienvenidos amigos!')
 // })
-const holaMundo = e => alert(e.target.textContent) 
-title.addEventListener('click',e => {
-    holaMundo(e)
-})
-document.getElementById('saludar').addEventListener('click', e => {
-    holaMundo(e)
+const holaMundo = e => c(e.target.textContent) 
+// title.addEventListener('click',e => {
+//     holaMundo(e)
+// })
+// document.getElementById('saludar').addEventListener('click', e => {
+//     holaMundo(e)
+// })
+
+// title.addEventListener('dblclick', e => {
+//     holaMundo(e)
+// })
+
+// title.addEventListener('mouseenter', e => {
+//     holaMundo(e)
+// })
+
+// title.addEventListener('mouseleave', e => {
+//     holaMundo(e)
+// })
+
+// const createMenu = e => {
+//     const menu = document.createElement('div')
+//     const prevMenu = document.getElementById('context-menu')
+//     menu.id = 'context-menu'
+//     menu.textContent = 'Soy un menu contextual'
+
+//     if(prevMenu)
+//         document.body.removeChild(prevMenu)
+//         document.body.appendChild(menu)
+
+//     menu.style.padding = '1em'
+//     menu.style.background = '#eee'
+//     menu.style.position = 'fixed'
+//     menu.style.top = `${e.pageY}px`
+//     menu.style.left = `${e.pageX}px`
+// }
+// document.addEventListener('contextmenu', e => {
+//     // holaMundo(e)
+//     // c(e)
+//     // c(e.pageX, e.pageY)
+//     createMenu(e)
+//     e.preventDefault()
+// })
+
+// title.addEventListener('mousedown', e => {
+//     c('estoy arrastrando un elemento')
+// })
+
+// title.addEventListener('mouseup', e => {
+//     c('estoy arrastrando un elemento')
+// })
+
+title.addEventListener('mousemove', e => {
+    c('estoy arrastrando un elemento')
 })
