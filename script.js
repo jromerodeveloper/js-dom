@@ -117,74 +117,241 @@ let c = console.log
 
 
 
-// document.querySelector('h1').onclick
-const title = document.getElementById('title')
-// title.addEventListener('click', () => {
-    //alert('hola mundo')
-// })
-// const holaMundo = () => alert('Hola mundillo')
-// title.addEventListener('click',holaMundo)
-// document.getElementById('saludar').addEventListener('click',holaMundo)
+// // document.querySelector('h1').onclick
+// const title = document.getElementById('title')
+// // title.addEventListener('click', () => {
+//     //alert('hola mundo')
+// // })
+// // const holaMundo = () => alert('Hola mundillo')
+// // title.addEventListener('click',holaMundo)
+// // document.getElementById('saludar').addEventListener('click',holaMundo)
 
-// const holaMundo = text => alert(text)
-// title.addEventListener('click',()=>{
-//     holaMundo('El DOM')
-// })
-// document.getElementById('saludar').addEventListener('click',()=>{
-//     holaMundo('Bienvenidos amigos!')
-// })
-const holaMundo = e => c(e.target.textContent) 
-// title.addEventListener('click',e => {
-//     holaMundo(e)
-// })
-// document.getElementById('saludar').addEventListener('click', e => {
-//     holaMundo(e)
+// // const holaMundo = text => alert(text)
+// // title.addEventListener('click',()=>{
+// //     holaMundo('El DOM')
+// // })
+// // document.getElementById('saludar').addEventListener('click',()=>{
+// //     holaMundo('Bienvenidos amigos!')
+// // })
+// const holaMundo = e => c(e.target.textContent) 
+// // title.addEventListener('click',e => {
+// //     holaMundo(e)
+// // })
+// // document.getElementById('saludar').addEventListener('click', e => {
+// //     holaMundo(e)
+// // })
+
+// // title.addEventListener('dblclick', e => {
+// //     holaMundo(e)
+// // })
+
+// // title.addEventListener('mouseenter', e => {
+// //     holaMundo(e)
+// // })
+
+// // title.addEventListener('mouseleave', e => {
+// //     holaMundo(e)
+// // })
+
+// // const createMenu = e => {
+// //     const menu = document.createElement('div')
+// //     const prevMenu = document.getElementById('context-menu')
+// //     menu.id = 'context-menu'
+// //     menu.textContent = 'Soy un menu contextual'
+
+// //     if(prevMenu)
+// //         document.body.removeChild(prevMenu)
+// //         document.body.appendChild(menu)
+
+// //     menu.style.padding = '1em'
+// //     menu.style.background = '#eee'
+// //     menu.style.position = 'fixed'
+// //     menu.style.top = `${e.pageY}px`
+// //     menu.style.left = `${e.pageX}px`
+// // }
+// // document.addEventListener('contextmenu', e => {
+// //     // holaMundo(e)
+// //     // c(e)
+// //     // c(e.pageX, e.pageY)
+// //     createMenu(e)
+// //     e.preventDefault()
+// // })
+
+// // title.addEventListener('mousedown', e => {
+// //     c('estoy arrastrando un elemento')
+// // })
+
+// // title.addEventListener('mouseup', e => {
+// //     c('estoy arrastrando un elemento')
+// // })
+
+// title.addEventListener('mousemove', e => {
+//     c('estoy arrastrando un elemento')
 // })
 
-// title.addEventListener('dblclick', e => {
-//     holaMundo(e)
+
+
+
+
+const input = document.getElementById('input')
+
+// input.addEventListener('keyup', e => {
+//     c(e.key)
+//     c(e.ctrlKey)
+//     c(e.altKey)
 // })
 
-// title.addEventListener('mouseenter', e => {
-//     holaMundo(e)
+// addEventListener('keydown', e => {
+//     if(e.key === 'a' && e.ctrlKey === true){
+//         e.preventDefault()
+//         alert('CTR A')
+//     }
 // })
 
-// title.addEventListener('mouseleave', e => {
-//     holaMundo(e)
+// let x = 0, y = 0
+// addEventListener('keydown', e => {
+//     const ball = document.getElementById('ball')
+//     const move = direction => {
+//         switch (direction) {
+//             case 'up':
+//                 y--
+//             break;
+//             case 'down':
+//                 y++
+//             break
+//             case 'left':
+//                 x--
+//             break
+//             case 'right':
+//                 x++
+//             break
+//             default:
+//                 break;
+//         }
+//         ball.style.transform = `translate(${x*20}px,${y*20}px)`
+//     }
+
+//     switch (e.key) {
+//         case 'ArrowUp':
+//             move('up')
+//         break;
+//         case 'ArrowDown':
+//             move('down')
+//         break;
+//         case 'ArrowLeft':
+//             move('left')
+//         break;
+//         case 'ArrowRight':
+//             move('right')
+//         break;
+//         default:
+//             break;
+//     }
 // })
 
-// const createMenu = e => {
-//     const menu = document.createElement('div')
-//     const prevMenu = document.getElementById('context-menu')
-//     menu.id = 'context-menu'
-//     menu.textContent = 'Soy un menu contextual'
 
-//     if(prevMenu)
-//         document.body.removeChild(prevMenu)
-//         document.body.appendChild(menu)
 
-//     menu.style.padding = '1em'
-//     menu.style.background = '#eee'
-//     menu.style.position = 'fixed'
-//     menu.style.top = `${e.pageY}px`
-//     menu.style.left = `${e.pageX}px`
-// }
-// document.addEventListener('contextmenu', e => {
-//     // holaMundo(e)
+
+
+
+// const form = document.getElementById('form')
+// form.addEventListener('submit', () => {
+//     c('Ha enviado el formulario')
+// })
+
+// const rememberPassword = document.getElementById('remember-password')
+// rememberPassword.addEventListener('change', e => {
 //     // c(e)
-//     // c(e.pageX, e.pageY)
-//     createMenu(e)
-//     e.preventDefault()
+//     if(e.target.checked){
+//         c('El usuario quiere recordar su contraseña')
+//     } else {
+//         c('El usuario NO quiere recordar su contraseña')
+//     }
 // })
 
-// title.addEventListener('mousedown', e => {
-//     c('estoy arrastrando un elemento')
+// const name = document.getElementById('name')
+// name.addEventListener('blur', e => {
+//     c(e)
+// })
+// name.addEventListener('focus', e => {
+//     c(e)
 // })
 
-// title.addEventListener('mouseup', e => {
-//     c('estoy arrastrando un elemento')
+// form.addEventListener('reset', e => {
+//     c(e)
 // })
 
-title.addEventListener('mousemove', e => {
-    c('estoy arrastrando un elemento')
-})
+
+
+
+
+// addEventListener('DOMContentLoaded', () => {
+//     // Espera que cargue lo basico del DOM 
+//     const form =  document.getElementById('form')
+//     form.addEventListener('submit', () => {
+//         alert('Se ejecuta el DOMContentLoaded')
+//     })  
+// })
+
+// addEventListener('load', () => {
+//     // Espera hasta que termine de cargar TODO el contenido de página
+//     const form =  document.getElementById('form')
+//     form.addEventListener('submit', () => {
+//         alert('Se ejecuta el LOAD')
+//     })  
+// })
+
+// addEventListener('scroll', e => {
+//     c(scrollX, scrollY)
+// })
+
+// addEventListener('resize', e => {
+//     c(e.target.innerWidth, innerHeight)
+//     c(outerWidth, e.target.outerHeight)
+// })
+
+
+
+
+
+
+// const video = document.getElementById('video'),
+//       play = document.getElementById('play'),
+//       pause = document.getElementById('pause')
+
+// play.addEventListener('click', () => {
+//     video.play()
+// })
+// pause.addEventListener('click', () => {
+//     video.pause()
+// //   play.click()
+// })
+
+
+
+
+
+// document.querySelectorAll('div').forEach(el => {
+//     el.addEventListener('click', e => {
+//         // c('click')
+//         c(`Hiciste click en el div ${e.target.id}`)
+//         e.stopPropagation()
+//     })
+// })
+
+// const gallery = document.getElementById('gallery')
+// gallery.addEventListener('click', e => {
+//     const t = e.target,
+//           images = Array.from(gallery.querySelectorAll('img')),
+//           i = images.indexOf(t)
+//     c(`Hiciste click en la imagen ${i + 1}`)
+// })
+
+
+
+
+
+
+
+const parent = document.getElementById('parent')
+c(parent)

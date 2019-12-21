@@ -1,3 +1,34 @@
 body{
     background-color: lightskyblue;
+    /* display: flex; */
+    min-height: 100vh;
+    padding-bottom: 100em;
+}
+input{
+    font-size: 2em;
+    padding: .25em;
+} 
+.ball{
+    --size: 60px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: red;
+    margin: auto;
+}
+
+/* div{
+    padding: 2em;
+    border: 1px solid #999
+} */
+
+.galery{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1em;
+}
+
+.img img{
+    width: 100%;
+    display: block;
 }
